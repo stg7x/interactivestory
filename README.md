@@ -1,4 +1,4 @@
-# interactivestory
+# interactive story game flutter
 
 A new Flutter project.
 
