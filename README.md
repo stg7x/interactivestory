@@ -1,16 +1,24 @@
-# interactive story game flutter
+# Interactive Story Game 🎮📖
 
-A new Flutter project.
+An interactive story game built with **Flutter**.  
+Players make choices (Yes/No) to progress through the story, with images and branching paths.
 
-## Getting Started
+## Features ✨
+- Interactive story with images  
+- Yes/No choices to move forward  
+- Loops back to the beginning after the ending  
+- Simple and minimal design  
 
-This project is a starting point for a Flutter application.
+## Screenshots 📸
+![Forest](assets/forest.jpg)
+![River](assets/river.jpg)
+![Ending](assets/ending.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+## Getting Started 🚀
+To run this project on your local machine:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/stg7x/interactivestory.git
+cd interactivestory
+flutter pub get
+flutter run
