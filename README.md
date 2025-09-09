@@ -10,9 +10,8 @@ Players make choices (Yes/No) to progress through the story, with images and bra
 - Simple and minimal design  
 
 ## Screenshots 📸
-![Forest](assets/forest.jpg)
-![River](assets/river.jpg)
-![Ending](assets/ending.jpg)
+![Uploading Screenshot_1757451457.png…]()
+
 
 ## Getting Started 🚀
 To run this project on your local machine:
