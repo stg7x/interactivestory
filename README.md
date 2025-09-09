@@ -9,8 +9,12 @@ Players make choices (Yes/No) to progress through the story, with images and bra
 - Loops back to the beginning after the ending  
 - Simple and minimal design  
 
-## Screenshots 📸
-![Uploading Screenshot_1757451457.png…]()
+
+
+
+<img width="1080" height="2400" alt="Screenshot_1757451457" src="https://github.com/user-attachments/assets/2ce81f13-4c03-4dbf-8ed4-53e6c55b31a0" />
+
+
 
 
 ## Getting Started 🚀
