@@ -19,12 +19,25 @@ class StoryPage extends StatefulWidget {
 
 class _StoryPageState extends State<StoryPage> {
   int storyIndex = 0;
-  bool swipeEnabled = false; // ayar ile kontrol
+  bool swipeEnabled = false;
 
   final List<Map<String, dynamic>> storyData = [
-    {'text': 'Bir ormana geldin. Devam etmek ister misin?', 'image': 'assets/forest.jpg'},
-    {'text': 'Bir nehir gördün. Üzerinden geçmek ister misin?', 'image': 'assets/river.jpg'},
-    {'text': 'Macera sona erdi!', 'image': 'assets/ending.jpg'},
+    {
+      'text': 'Güneşin sıcak ışıkları tenimi okşarken, ayaklarımın altındaki ılık kumda yürüyor, denizin sonsuz maviliğine dalıp gitmiştim. Bugün, her zamanki gibi sakin bir gündü, ya da öyle sanmıştım.',
+      'image': 'assets/ilkresim.png',
+    },
+    {
+      'text': 'Uzakta, kumsalda tek başına oturan yaşlı bir adam dikkatimi çekti. Üzerinde eski püskü ama temiz kıyafetler vardı ve denize doğru bakıyordu, sanki bir şey bekliyormuş gibiydi.',
+      'image': 'assets/hikaye2.png',
+    },
+    {
+      'text': 'Merakıma yenik düşerek ona doğru yürüdüm. Yaklaştıkça, yüzündeki derin çizgilerin her birinin bir hikaye anlattığını fark ettim. Yanına vardığımda, bana döndü ve gözlerinde bilgelikle dolu bir parıltı vardı.',
+      'image': 'assets/3hikaye.png',
+    },
+    {
+      'text': 'Sözleri beni şaşırttı. Tam ne diyeceğimi düşünürken, arkasındaki havada garip bir titreşim başladı. Hava bükülüyor, renkler dans ediyordu. Sanki görünmez bir el perdenin arkasını aralıyordu.',
+      'image': 'assets/4hikaye.png',
+    },
   ];
 
   void nextStory(bool choice) {
@@ -73,33 +86,42 @@ class _StoryPageState extends State<StoryPage> {
                 }
               }
             : null,
-        child: Column(
+        child: Stack(
           children: [
-            Expanded(
-              flex: 5,
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(storyData[storyIndex]['image']),
-                    fit: BoxFit.cover,
-                  ),
+            // Arka plan görseli tüm ekran
+            Container(
+              width: double.infinity,
+              height: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(storyData[storyIndex]['image']),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            Expanded(
-              flex: 3,
+            // Hikaye kutucuğu ve butonlar
+            Positioned(
+              bottom: 40,
+              left: 20,
+              right: 20,
               child: Container(
-                padding: EdgeInsets.all(20),
-                width: double.infinity,
-                color: Colors.white,
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       storyData[storyIndex]['text'],
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
+                    if (!swipeEnabled) SizedBox(height: 12),
                     if (!swipeEnabled)
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
