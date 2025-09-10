@@ -13,7 +13,8 @@ Players make choices (Yes/No) to progress through the story, with images and bra
 
 
 
-<img width="300"  alt="hikaye2" src="https://github.com/user-attachments/assets/42dca337-2eab-43d6-8aa4-2c113f6ecae9" />
+
+<img width="300"  alt="Screenshot_1757469471" src="https://github.com/user-attachments/assets/d8b17010-e0ff-4240-a1ba-41206892410e" />
 
 
 
